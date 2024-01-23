@@ -1,5 +1,5 @@
-//Driving License ----> gender = Male and age >= 18 - Driving Allowed
-//						gender = Female and age >= 22 - ----"------
+//Driving License ----> gender = Male and age >= 18 - Driving Allowed for Male
+//						gender = Female and age >= 22 - ----"------ for Female
 #include<stdio.h>
 int main()
 {
@@ -11,13 +11,37 @@ int main()
 	printf("\nEnter the Age:");
 	scanf("%d",&age);
 	
-	if(age>=18 && gender == 'm')
+	if(gender == 'm')
 	{
-		printf("\nDriving Allowed for Male Driver");
+		if(age >= 18)
+		{
+			printf("\nDriving Allowed for Male Driver");
+		}
+		else
+		{
+			printf("\nDriving Not Allowed for Male Driver");
+		}
 	}
 	else
 	{
-		printf("\nDriving Not Allowed for Male Driver");
+		if(age >= 22)
+		{
+			printf("\nDriving Allowed for Female Driver");
+		}
+		else
+		{
+			printf("\nDriving Not Allowed for Female Driver");
+		}
 	}
+	
 	return 0;
 }
+
+
+
+
+
+
+
+
+
